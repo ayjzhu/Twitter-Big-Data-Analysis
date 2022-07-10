@@ -1,5 +1,5 @@
 # Twitter-Big-Data-Analysis
-Big Data Analysis using Spark SQL with Scala on a 100k twitter data set
+Big Data Analysis using Spark SQL with Scala on a 10k twitter data set.
 
 
 ## Overview
@@ -25,13 +25,37 @@ The relevant attributes are below:
 
 The `Tweets_clean_10k.json` in the `data` folder contains a sample output for the 10k dataset after perform data cleaning on the dataset.
 
+#### Schema and Result:
+Schema of the cleaned dataset with selected columns (Top)
+![image](https://github.com/ayjzhu/Twitter-Big-Data-Analysis/blob/main/doc/task1.jpg)
+<p align="center">
+     A list of top 20 hashtags keywords (Bottom)
+</p>
+
 ### Task 2 Data preparation 2:
 This task continues with the list of top 20 hashtags obtained from task 1 and compares with each tweet to indicate whether it's a topic and add it as a new column to the data. Using the array_intersect function to compute the intersection between the list of hashtags and the list of the most frequent keywords. Lastly, keep only the records that have a topic and store the output in a JSON file named “tweets_topic”.
 
+### Schema
+Schema of the task 2 with selected columns
+![image](https://github.com/ayjzhu/Twitter-Big-Data-Analysis/blob/main/doc/task2_schema.png)
+
+### Result
 Total topic data (# of tweet contains the top 20 keywords in their hashtags value) for 10k data: `269`
+
+![image](https://github.com/ayjzhu/Twitter-Big-Data-Analysis/blob/main/doc/task2_result.png)
 
 ### Task 3 Topic prediction:
 The model is built using a pipeline composed of transformers: string indexer, text tokenizer, and word2vec with logistic regression as the estimator. A parameter grid testing the word2vec minCounts and logistic regression’s regularization parameters is used with the cross-validator to produce the best model.
+
+### Output
+Sample output of applying the model to test set
+
+![image](https://github.com/ayjzhu/Twitter-Big-Data-Analysis/blob/main/doc/task3_schema.png)
+
+### Precesion and Recall
+Sample precision and recall on test set
+
+![image](https://github.com/ayjzhu/Twitter-Big-Data-Analysis/blob/main/doc/task3_result.png)
 
 ## How to Run
 
