@@ -1,9 +1,11 @@
 # Twitter-Big-Data-Analysis
-Big Data Analysis using Spark SQL with Scala on a 10k twitter data set.
-
+Big Data Analysis using Spark SQL with Scala on a 100k twitter data set.
 
 ## Overview
-In this project, Twitter Data Analysis breaks it into 3 different tasks: In the first task, the data preparation 1 which involves data cleaning on a 10kpoints twitter dataset to get the relevant attributes and store the output in a new JSON. In addition, run a top-k SQL query to select the top 20 most frequent hashtags keywords on the clean data. In the second task, the data preparation 2 is to add a new column topic, that will include the intersection of the hashtag and top 20 keywords. Task 3 invovles with topic prediction which to build a machine learning model that assigns a topic for each tweet based on the classified tweets. The model should learn the relationship between all features and the topic. Then, it applies this model to all data to predict one topic for each tweet. The machine learning pipeline should include the following.
+In this project, Twitter Data Analysis breaks it into 3 different tasks: In the first task, the data preparation 1 which involves data cleaning on a 10k points twitter dataset to get the relevant attributes and store the output in a new JSON. In addition, run a top-k SQL query to select the top 20 most frequent hashtags keywords on the clean data. In the second task, the data preparation 2 is to add a new column topic, that will include the intersection of the hashtag and top 20 keywords. Task 3 invovles with topic prediction which to build a machine learning model that assigns a topic for each tweet based on the classified tweets. The model should learn the relationship between all features and the topic. Then, it applies this model to all data to predict one topic for each tweet. The machine learning pipeline should include the following.
+
+*(Note: The original project involved with using a 100k twitter data set. However, due to the massive file size, a 10k points dataset is demonstrated here instead.)*
+
 
 ## Methods
 Both task 1 and task 2 use Spark SQL, because it provides a mix of SQL queries with Spark and
